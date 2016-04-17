@@ -1,0 +1,95 @@
+@import "reset";
+@import "vars";
+@import "grid";
+@import "common";
+
+/*
+ * App specific styles
+ */
+
+.b-root {
+  min-width: 220px;
+  max-width: 1680px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.box {
+  background-color: $background--light;
+}
+
+.product-grid {
+  overflow: hidden;
+  padding-bottom: $half-space;
+
+  .product-item {
+    $shadowColor: rgba(0, 0, 0, .4);
+    $shadowSize: 7px;
+
+    position: relative;
+    width: 320px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 24px 24px 0 4px;
+    box-shadow: 0 0 $shadowSize $shadowColor;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0 0 $shadowSize*2 $shadowColor;
+    }
+  }
+}
+
+.product-item__meta  {
+  margin-top: 30px;
+}
+
+.product-item__face {
+  padding-top: 16px;
+}
+
+.product-item__price {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  color: $blue;
+  font-size: $font-size--md;
+}
+
+.product-item__timestamp {
+  position: absolute;
+  bottom: 1.5em;
+  left: 2em;
+  color: $grayish;
+  font-size: $font-size--xs;
+  text-align: left;
+  white-space: normal;
+}
+
+.sort-selector {
+  margin: $half-space 0 0;
+}
+
+.app-status {
+  text-align: center;
+  padding: $font-size--xmd;
+  background: rgba(0, 138, 222, .3);
+  color: $font-color--dark;
+  font-size: $font-size--md;
+  line-height: 2;
+  margin-bottom: $font-size--xmd;
+
+  .status-loader {
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

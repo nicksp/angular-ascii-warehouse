@@ -1,0 +1,2 @@
+# node_modules/ ignored by default
+static/dist/js/main.js

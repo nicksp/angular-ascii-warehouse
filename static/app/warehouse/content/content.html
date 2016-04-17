@@ -1,0 +1,15 @@
+<section class="products">
+
+  <warehouse-content-header></warehouse-content-header>
+
+  <when-scroll-ends action="loadProducts"></when-scroll-ends>
+
+  <div class="product-grid">
+    <warehouse-product
+        ng-repeat="item in warehouseContent.productList track by item.id + $index" item="item">
+    </warehouse-product>
+  </div>
+
+  <warehouse-content-status></warehouse-content-status>
+
+</section>

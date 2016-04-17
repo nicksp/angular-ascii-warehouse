@@ -1,0 +1,10 @@
+<div class="sort-selector">
+  Sort by
+  <select ng-model="$ctrl.wc.sortKey"
+      ng-change="$ctrl.wc.onChangeSortOrder()"
+      ng-disabled="!$ctrl.wc.productList.length">
+    <option value="id">Id</option>
+    <option value="size">Size</option>
+    <option value="price">Price</option>
+  </select>
+</div>

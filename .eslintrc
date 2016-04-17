@@ -1,0 +1,25 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "modules": true,
+    "templateStrings": true
+  },
+  "rules": {
+    "strict": [2, "global"],
+    "no-unused-vars": 2,
+    "no-console": 0,
+    "camelcase": [2, {"properties": "always"}],
+    "consistent-return": 0,
+    "arrow-spacing": 2,
+    "arrow-parens": [2, "always"],
+    "arrow-body-style": [2, "always"]
+  }
+}

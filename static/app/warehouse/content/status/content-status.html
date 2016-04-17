@@ -1,0 +1,6 @@
+<div class="app-status" ng-show="$ctrl.wc.isLoading || $ctrl.wc.hasReachedEnd">
+  <p ng-if="$ctrl.wc.isLoading">
+    <img src="/assets/images/loader.svg" class="status-loader" alt="loading" /> loading...
+  </p>
+  <p ng-if="$ctrl.wc.hasReachedEnd">~ end of catalogue ~</p>
+</div>

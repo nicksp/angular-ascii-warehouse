@@ -1,0 +1,52 @@
+/**
+ * Mini framework for grids
+ */
+
+.grid {
+  display: block;
+  clear: both;
+
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+/* Wrapping at a maximum width is optional */
+.wrap .grid,
+.grid.wrap {
+  max-width: 978px;
+  margin: 0 auto;
+}
+
+/* Clearfix after every .grid */
+.grid {
+  *zoom: 1;
+}
+
+.grid:before, .grid:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.grid:after {
+  clear: both;
+}
+
+/* Responsive Stuff */
+@media screen and (max-width: 568px) {
+
+  body {
+    font-size: 12px !important;
+  }
+}
+
+/* Expand the wrap a bit further on larger screens */
+@media screen and (min-width: 1180px) {
+  .wider .grid {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}

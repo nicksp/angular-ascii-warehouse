@@ -1,0 +1,10 @@
+<div class="product-item box">
+  <div class="product-item__wrapper" ng-if="$ctrl.item.face">
+    <div class="product-item__face" ng-style="{'font-size': $ctrl.item.size + 'px'}">{{ ::$ctrl.item.face }}</div>
+    <div class="product-item__meta">
+      <div class="product-item__price">{{ ::$ctrl.item.price | money }}</div>
+      <div class="product-item__timestamp">{{ ::$ctrl.item.date | timestamp }}</div>
+    </div>
+  </div>
+  <div class="ad" ng-if="!$ctrl.item.face" ng-bind-html="::$ctrl.item.adBlock"></div>
+</div>
